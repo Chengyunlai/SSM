@@ -1,4 +1,4 @@
-package proxyInterface;
+package proxy.proxyInterface;
 
 public interface HelloWorld {
     public void sayHelloWorld();

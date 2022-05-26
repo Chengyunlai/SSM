@@ -1,6 +1,6 @@
-package proxyInterface.impl;
+package proxy.proxyInterface.impl;
 
-import proxyInterface.HelloWorld;
+import proxy.proxyInterface.HelloWorld;
 
 public class HelloWorldImpl implements HelloWorld {
     public void sayHelloWorld() {

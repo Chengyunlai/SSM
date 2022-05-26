@@ -1,10 +1,7 @@
-package jdkProxy.test;
+package proxy.jdkProxy.test;
 
-import jdkProxy.JdkProxyHelloWorld;
-import proxyInterface.HelloWorld;
-import proxyInterface.impl.HelloWorldImpl;
+import proxy.proxyInterface.HelloWorld;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -19,8 +16,9 @@ public class JdkProxyHelloWorldTest {
         InvocationHandler handler = new InvocationHandler() {
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 System.out.println("代理对象执行");
-                Annotation[] declaredAnnotations = method.getDeclaredAnnotations();
-                System.out.println(declaredAnnotations);
+                if (method.getName().equals("sayHelloWorld")){
+                    System.out.println("你好世界");
+                }
                 return null;
             }
         };
